@@ -79,21 +79,31 @@ let books = {
         }
     ]
 }
+/*let katalogas = books[i]
+for (let i = 0; i < books.length; i++) {
+    console.log(books[i] + 'literatūra' + books[i].length)
+}*/
+for (let type in books) {
+    console.log(type + ' literatura ' + books[type].length + ' knygos')
+}
+
 for (let book of Object.keys(books)) {
-    for (let data in book) {
+    for (metai in book) {
         if (book.metai === 2021) {
-            console.log(book.pavadinimas + '(nauja knyga)');
-        } console.log(book.pavadinimas);
-    }
-    for(let type in Object.keys(books)) {
-        console.log('literatūra' + type + book[type].length + 'knygų');
-    }
-}
-const ul = document.querySelector('.grožinė')
-for (let book of Object.keys(books)) {
-    for (let data in book) {
-        const li = document.createElement('li');
-        li.textContent=Object.keys(books).Grožinė[data]
-        ul.appendChild(li)
+            console.log(books[pavadinimas].name + '(nauja knyga)');
+        }
+        console.log(book.pavadinimas);
+
     }
 }
+
+
+
+    const ul = document.querySelector('.grožinė')
+    for (let book of Object.keys(books)) {
+        for (let data in book) {
+            const li = document.createElement('li');
+            li.textContent = book[data]
+            ul.appendChild(li)
+        }
+    }
